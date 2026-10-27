@@ -1,0 +1,56 @@
+{
+  "name": "@smoud/ffmpeg",
+  "version": "1.0.0",
+  "description": "ffmpeg binaries for macOS, Linux, Windows and FreeBSD. Uses the ffmpeg you already have, or downloads a verified build once per machine on first use. No postinstall, no dependencies.",
+  "keywords": [
+    "ffmpeg",
+    "ffmpeg-static",
+    "static",
+    "binary",
+    "binaries",
+    "media",
+    "audio",
+    "video",
+    "sound",
+    "music",
+    "encode",
+    "decode",
+    "transcode",
+    "convert",
+    "compress",
+    "codec",
+    "mp3",
+    "aac",
+    "ogg",
+    "opus",
+    "wav",
+    "mp4",
+    "webm",
+    "mac",
+    "linux",
+    "windows",
+    "freebsd"
+  ],
+  "homepage": "https://github.com/smoudjs/ffmpeg#readme",
+  "bugs": {
+    "url": "https://github.com/smoudjs/ffmpeg/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/smoudjs/ffmpeg.git"
+  },
+  "license": "MIT",
+  "author": "Smoud",
+  "type": "commonjs",
+  "main": "index.js",
+  "types": "index.d.ts",
+  "files": [
+    "index.js",
+    "index.d.ts",
+    "LICENSE",
+    "README.md"
+  ],
+  "engines": {
+    "node": ">=20.9.0"
+  }
+}
