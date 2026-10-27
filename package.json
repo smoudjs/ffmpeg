@@ -1,6 +1,6 @@
 {
   "name": "@smoud/ffmpeg",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "ffmpeg binaries for macOS, Linux, Windows and FreeBSD. Uses the ffmpeg you already have, or downloads a verified build once per machine on first use. No postinstall, no dependencies.",
   "keywords": [
     "ffmpeg",

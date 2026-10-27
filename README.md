@@ -1,5 +1,11 @@
 # @smoud/ffmpeg
 
+[![npm version](https://img.shields.io/npm/v/@smoud/ffmpeg.svg)](https://www.npmjs.com/package/@smoud/ffmpeg)
+[![npm downloads](https://img.shields.io/npm/dw/@smoud/ffmpeg.svg)](https://www.npmjs.com/package/@smoud/ffmpeg)
+[![node](https://img.shields.io/node/v/@smoud/ffmpeg.svg)](https://www.npmjs.com/package/@smoud/ffmpeg)
+[![dependencies](https://img.shields.io/badge/dependencies-0-brightgreen.svg)](https://www.npmjs.com/package/@smoud/ffmpeg?activeTab=dependencies)
+[![license](https://img.shields.io/npm/l/@smoud/ffmpeg.svg)](https://github.com/smoudjs/ffmpeg/blob/master/LICENSE)
+
 ffmpeg binaries for macOS, Linux, Windows and FreeBSD. Uses the ffmpeg you already have, or downloads a verified build once per machine.
 
 - **Uses the ffmpeg you already have.** If `ffmpeg` is on the PATH, nothing is downloaded.
@@ -105,4 +111,15 @@ Runs ffmpeg with `args`, adding `-hide_banner` in front. `input` (a Buffer) is w
 
 This package is MIT licensed.
 
-The ffmpeg binaries it downloads are not part of this package. They are GPL licensed copies of the [ffmpeg-static](https://github.com/eugeneware/ffmpeg-static) builds, hosted in the [builds-6.1.1](https://github.com/smoudjs/ffmpeg/releases/tag/builds-6.1.1) release of this repository. Each build comes with a `<platform>.LICENSE` file and, where the original had one, a `<platform>.README` that says which source it was built from.
+The ffmpeg binaries it downloads are not part of this package. They are GPL licensed static builds, hosted unchanged in the [builds-6.1.1](https://github.com/smoudjs/ffmpeg/releases/tag/builds-6.1.1) release of this repository. Thanks to the people who build them:
+
+| Platform     | Built by                                                                       |
+| ------------ | ------------------------------------------------------------------------------ |
+| win32-x64    | [gyan.dev](https://www.gyan.dev/ffmpeg/builds/)                                |
+| win32-ia32   | [sudo-nautilus](https://github.com/sudo-nautilus/FFmpeg-Builds-Win32)          |
+| linux-*      | [johnvansickle.com](https://johnvansickle.com/ffmpeg/)                         |
+| darwin-x64   | [evermeet.cx](https://evermeet.cx/ffmpeg/)                                     |
+| darwin-arm64 | [osxexperts.net](https://www.osxexperts.net/)                                  |
+| freebsd-x64  | [Thefrank](https://github.com/Thefrank/ffmpeg-static-freebsd)                  |
+
+Each build in the release comes with a `<platform>.LICENSE` file and, where the builder provided one, a `<platform>.README` that says which source it was built from. The ffmpeg source code is available at [ffmpeg.org](https://ffmpeg.org/download.html).

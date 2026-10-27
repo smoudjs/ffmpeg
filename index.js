@@ -15,8 +15,9 @@ const tls = require('node:tls');
 const { gunzipSync } = require('node:zlib');
 
 const BUILDS_URL = 'https://github.com/smoudjs/ffmpeg/releases/download/builds-6.1.1';
-// Copies of the ffmpeg-static release files. Its 6.1.1 release dropped freebsd-x64 and win32-ia32, so those two are
-// ffmpeg 6.0. `version` names the cache folder; `sha256` is of the release file `ffmpeg-<platform>-<arch>.gz`.
+// Static builds by gyan.dev (win32-x64), sudo-nautilus (win32-ia32), johnvansickle.com (linux), evermeet.cx
+// (darwin-x64), osxexperts.net (darwin-arm64) and Thefrank (freebsd-x64). freebsd-x64 and win32-ia32 are ffmpeg 6.0.
+// `version` names the cache folder; `sha256` is of the release file `ffmpeg-<platform>-<arch>.gz`.
 const BUILDS = {
   'darwin-arm64': { version: '6.1.1', sha256: '8923876afa8db5585022d7860ec7e589af192f441c56793971276d450ed3bbfa' },
   'darwin-x64': { version: '6.1.1', sha256: '929b375c1182d956c51f7ac25e0b2b0411fb01f6f407aa15c9758efeb4242106' },
