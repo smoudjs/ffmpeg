@@ -95,7 +95,7 @@ The first run on a fresh machine downloads ffmpeg (about 20–30 MB, a few secon
 
 ### `findFfmpeg(): Promise<{ path, version }>`
 
-Finds ffmpeg as described above. `path` is what to spawn; `version` is what ffmpeg reports, e.g. `6.1.1`. The lookup runs once per process; if it fails, the next call tries again.
+Finds ffmpeg as described above. `path` is what to spawn; `version` is what ffmpeg reports, e.g. `6.1.1-essentials_build-www.gyan.dev`. The lookup runs once per process; if it fails, the next call tries again.
 
 ### `runFfmpeg(args, input?): Promise<{ stdout, stderr }>`
 

@@ -4,7 +4,10 @@
 export interface Ffmpeg {
   /** What to spawn: the FFMPEG_PATH value, `ffmpeg` when it comes from the PATH, or the downloaded file. */
   path: string;
-  /** The version ffmpeg reports, e.g. `6.1.1`. Another version may encode other bytes, so it suits cache keys. */
+  /**
+   * The version ffmpeg reports, e.g. `6.1.1-essentials_build-www.gyan.dev`. Another build may encode other bytes, so it
+   * suits cache keys.
+   */
   version: string;
 }
 

@@ -41,6 +41,9 @@
   },
   "license": "MIT",
   "author": "Smoud",
+  "scripts": {
+    "deploy": "npm publish --access public"
+  },
   "type": "commonjs",
   "main": "index.js",
   "types": "index.d.ts",

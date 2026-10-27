@@ -167,7 +167,11 @@ async function get(url, redirectsLeft = MAX_REDIRECTS) {
 function request(target, socket) {
   return new Promise((resolve, reject) => {
     const options = { timeout: IDLE_TIMEOUT_MS };
-    if (socket) options.createConnection = () => tls.connect({ socket, servername: target.hostname });
+    if (socket) {
+      // without an agent Node assumes port 80 and sends `Host: github.com:80`, which GitHub redirects to itself
+      options.defaultPort = 443;
+      options.createConnection = () => tls.connect({ socket, servername: target.hostname });
+    }
     const req = https.get(target, options, resolve);
     req.on('error', reject);
     req.on('timeout', () => req.destroy(new Error('timed out')));
