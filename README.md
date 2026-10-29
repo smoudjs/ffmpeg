@@ -43,6 +43,34 @@ CommonJS works the same way:
 const { findFfmpeg, runFfmpeg } = require('@smoud/ffmpeg');
 ```
 
+## Command line
+
+`smoud-ffmpeg` runs ffmpeg with your arguments exactly as you typed them:
+
+```sh
+npx @smoud/ffmpeg -i music.wav music.mp3
+```
+
+Or install it globally and call it by name:
+
+```sh
+npm install -g @smoud/ffmpeg
+smoud-ffmpeg -i music.wav -c:a libopus music.ogg
+```
+
+In npm scripts, with the package in your dependencies:
+
+```json
+"scripts": {
+  "audio": "smoud-ffmpeg -y -i music.wav music.mp3"
+}
+```
+
+- ffmpeg is found or downloaded the same way as with the API.
+- Pipes work: `cat music.wav | smoud-ffmpeg -i pipe:0 -f mp3 pipe:1 > music.mp3`.
+- The exit code is ffmpeg's exit code.
+- Ctrl+C goes to ffmpeg, which finishes writing its output before it exits.
+
 ## How ffmpeg is found
 
 1. The `FFMPEG_PATH` environment variable.

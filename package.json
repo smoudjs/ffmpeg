@@ -1,6 +1,6 @@
 {
   "name": "@smoud/ffmpeg",
-  "version": "1.0.1",
+  "version": "1.1.0",
   "description": "ffmpeg binaries for macOS, Linux, Windows and FreeBSD. Uses the ffmpeg you already have, or downloads a verified build once per machine on first use. No postinstall, no dependencies.",
   "keywords": [
     "ffmpeg",
@@ -47,9 +47,13 @@
   "type": "commonjs",
   "main": "index.js",
   "types": "index.d.ts",
+  "bin": {
+    "smoud-ffmpeg": "cli.js"
+  },
   "files": [
     "index.js",
     "index.d.ts",
+    "cli.js",
     "LICENSE",
     "README.md"
   ],
